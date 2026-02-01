@@ -1,0 +1,36 @@
+<html>
+<head>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="nav">Compare Wage</div>
+
+<div class="container">
+<div class="card">
+
+<form method="POST">
+
+<select name="city">
+<option value="mumbai">Mumbai</option>
+<option value="pune">Pune</option>
+</select>
+
+<select name="job">
+<option value="delivery">Delivery</option>
+<option value="factory">Factory</option>
+</select>
+
+<button type="submit">Compare</button>
+
+</form>
+
+{% if result %}
+<h3>{{result}}</h3>
+{% endif %}
+
+</div>
+</div>
+
+</body>
+</html>

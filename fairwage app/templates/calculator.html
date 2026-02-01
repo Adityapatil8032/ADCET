@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Salary Calculator</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="navbar">FairWage Calculator</div>
+
+<div class="container">
+    <div class="card">
+        <h2>Fair Salary Calculator</h2>
+
+        <form action="/result" method="POST">
+
+            <label>Job Type</label>
+            <select name="job">
+
+<optgroup label="Industrial">
+<option value="construction">Construction Worker</option>
+<option value="factory">Factory Worker</option>
+<option value="electrician">Electrician</option>
+</optgroup>
+
+<optgroup label="Gig Economy">
+<option value="delivery">Delivery Partner</option>
+<option value="driver">Ride Driver</option>
+</optgroup>
+
+<optgroup label="Corporate">
+<option value="data_entry">Data Entry</option>
+<option value="accountant">Accountant</option>
+<option value="developer">Software Developer</option>
+</optgroup>
+
+<optgroup label="Service">
+<option value="security">Security Guard</option>
+<option value="shop_worker">Shop Worker</option>
+</optgroup>
+
+<optgroup label="Agriculture">
+<option value="farm_worker">Farm Worker</option>
+</optgroup>
+
+</select>
+
+
+            <label>Experience (Years)</label>
+            <input type="number" name="experience" required>
+
+            <br><br>
+            <button type="submit">Calculate Fair Salary</button>
+
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
