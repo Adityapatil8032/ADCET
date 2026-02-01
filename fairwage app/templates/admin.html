@@ -1,0 +1,96 @@
+<html>
+<head>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="nav">
+<div class="logo">⚙ FairWage Admin Panel</div>
+</div>
+
+<div class="container">
+
+<h1>Admin Control Dashboard</h1>
+
+<!-- STATS -->
+<div class="dashboard-grid">
+
+<div class="dash-card">
+<h3>Total Users</h3>
+<h2>{{ total_users }}</h2>
+</div>
+
+<div class="dash-card">
+<h3>Total Reports</h3>
+<h2>{{ total_reports }}</h2>
+</div>
+
+</div>
+
+<br>
+
+<!-- USERS TABLE -->
+<div class="card">
+
+<h2>Users Management</h2>
+
+<table width="100%">
+
+<tr>
+<th>ID</th>
+<th>Username</th>
+<th>Action</th>
+</tr>
+
+{% for u in users %}
+<tr>
+<td>{{ u.id }}</td>
+<td>{{ u.username }}</td>
+<td>
+<a href="/delete_user/{{u.id}}">
+<button style="background:#E53935">Delete</button>
+</a>
+</td>
+</tr>
+{% endfor %}
+
+</table>
+
+</div>
+
+<br>
+
+<!-- REPORTS TABLE -->
+<div class="card">
+
+<h2>Reports Management</h2>
+
+<table width="100%">
+
+<tr>
+<th>ID</th>
+<th>Issue</th>
+<th>Action</th>
+</tr>
+
+{% for r in reports %}
+<tr>
+<td>{{ r.id }}</td>
+<td>{{ r.issue }}</td>
+<td>
+<a href="/delete_report/{{r.id}}">
+<button style="background:#E53935">Delete</button>
+</a>
+</td>
+</tr>
+{% endfor %}
+
+</table>
+
+</div>
+
+</div>
+
+</body>
+</html>
